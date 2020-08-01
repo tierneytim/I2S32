@@ -1,4 +1,4 @@
-#include "I2S.h"
+#include "I2S32.h"
 void I2S::begin(int bck, int dout, int ws){
  // i2s configuration
   static const i2s_config_t i2s_config = {
