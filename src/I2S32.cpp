@@ -6,11 +6,12 @@ void I2S::begin(int bck, int dout, int ws){
     .sample_rate = 44100,
     .bits_per_sample = I2S_BITS_PER_SAMPLE_16BIT,
     .channel_format = I2S_CHANNEL_FMT_RIGHT_LEFT,
+    //.channel_format= I2S_CHANNEL_FMT_all_RIGHT,
     .communication_format = static_cast<i2s_comm_format_t>(I2S_COMM_FORMAT_I2S|I2S_COMM_FORMAT_I2S_MSB),
     .intr_alloc_flags = ESP_INTR_FLAG_LEVEL1, // default interrupt priority
     .dma_buf_count = 6,
     .dma_buf_len = 200,
-    .use_apll = false,
+    .use_apll = true,
     .tx_desc_auto_clear = true
   };
   
